@@ -1,0 +1,23 @@
+import java.util.*;
+        
+public class test {
+public static void main(String args[])
+{
+    
+    Scanner scn = new Scanner(System.in);
+    int a = scn.nextInt();
+    char s = scn.next().charAt(0);
+    int b = scn.nextInt();
+    if((s=='>' && a>b) || (s=='=' && a==b)){
+    System.out.println("Right");
+    }
+    else if(s=='<' && a<b){
+    System.out.println("Right");
+    }
+    else
+    {
+        System.out.println("Wrong");
+    }
+    
+}
+}
