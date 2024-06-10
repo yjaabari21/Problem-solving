@@ -1,0 +1,30 @@
+import java.util.*;
+public class test{
+    public static void main(String args[])
+    {
+        Scanner inp = new Scanner(System.in);
+        String n = inp.next();
+        if(n.contains("."))
+        {
+            String[] x = n.split("\\.");
+            int A = Integer.parseInt(x[0]);
+            int B = Integer.parseInt(x[1]);
+            if(A>0 && B == 0)
+            {
+                System.out.println("int " + A);
+            }
+            else if(A>0 && B>0 && x[1].length() == 1)
+            {
+                System.out.println("float " + A + " " + (float)B/10);
+            }
+            else if(A>0 && B>0 && x[1].length() == 2)
+            {
+                System.out.println("float " + A + " " + (float)B/100);
+            }
+            else if(A>0 && B>0 && (x[1].length() == 3))
+            {
+                System.out.println("float " + A + " " + (float)B/1000);
+            }
+        }
+    }
+}
