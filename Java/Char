@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class ptoject1 {
+    public static void main (String args[]){
+    Scanner inp = new Scanner (System.in);
+    String A = inp.next();
+    char[] B = A.toCharArray();
+    char x = B[0];
+    if(x>=65 && x<91)
+    {
+    int z = (int)x + 32;
+    System.out.println((char)z);
+   }
+    else if(x>=97 && x<123)
+    {
+    int z = (int)x - 32;
+    System.out.println((char)z);
+    }
+  }
+}
