@@ -1,0 +1,18 @@
+import java.util.*;
+        
+public class test {
+public static void main(String args[])
+{
+    int i;
+    Scanner scn = new Scanner(System.in);
+    int num = scn.nextInt();
+    for(i = 1; i<=num; i++){
+    while(i%2 == 0){
+        System.out.println(i);
+        break;}
+    while(num == 1){
+       System.out.println("-1");
+       break;}
+  }
+ }
+}
