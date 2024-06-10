@@ -1,0 +1,50 @@
+import java.util.*;
+        
+public class test {
+public static void main(String args[])
+{
+    Scanner scn = new Scanner(System.in);
+    long A = scn.nextLong();
+    long B = scn.nextLong();
+    long C = scn.nextLong();
+    long min;
+    long max;
+    if((A>B && A>C) && C>=B){
+    min = B;
+    max = A;
+    System.out.println(min + " " + max);
+    }
+    else if((A<B && A<C) && C<=B )
+    {
+    min = A;
+    max = B;
+    System.out.println(min + " " + max);
+    }
+    if((B>A && B>C) && A>=C){
+    min = C;
+    max = B;
+    System.out.println(min + " " + max);
+    }
+    else if((B<A && B<C) && A<=C){
+    min = B;
+    max = C;
+    System.out.println(min + " " + max);
+ 
+    }
+    if((C>A && C>B) && A<=B){
+    min = A;
+    max = C;
+    System.out.println(min + " " + max);
+    }
+    else if((C<A && C<B) && A>=B){ 
+    min = C;
+    max = A;
+    System.out.println(min + " " + max);
+    }
+    if( (A==B && A==C) && C==B){
+        min= A;
+        max= C;
+        System.out.println(min + " " + max);
+    }
+ }
+}
