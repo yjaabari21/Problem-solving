@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class ptoject1 {
+    public static void main (String args[]){
+    Scanner inp = new Scanner (System.in);
+    String s1 = inp.next();
+    String s2 = inp.next();
+    String s3 = s1.substring(s1.length()-1 , s1.length());
+    String s4 = s2.substring(s2.length()-1, s2.length());
+    int num1 = Integer.parseInt(s3);
+    int num2 = Integer.parseInt(s4);
+    int sum = num1+num2;
+    System.out.print(sum);
+ }
+}
