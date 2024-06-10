@@ -1,0 +1,18 @@
+import java.util.*;
+        
+public class test {
+public static void main(String args[])
+{
+    Scanner scn = new Scanner(System.in);
+    long A = scn.nextLong();
+    long B = scn.nextLong();
+    long C = scn.nextLong();
+    long D = scn.nextLong();
+    long multi = (A%100 * B%100 * C%100 * D%100)%100;
+    if(multi <=9)
+        System.out.print("0"+ multi );
+    else
+        System.out.println(multi);
+ 
+}
+}
