@@ -1,0 +1,23 @@
+import java.util.Scanner;
+ 
+ 
+public class Test {
+ 
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        
+        int inpDays = scn.nextInt();
+        
+        int year = inpDays/365;
+        
+        int months =  (inpDays%365)/ 30;
+        
+        int inDays = (inpDays%365)%30;
+        
+        System.out.println(year + " years");
+        
+        System.out.println(months + " months");
+        
+        System.out.println(inDays + " days");
+    }
+}
