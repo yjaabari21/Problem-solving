@@ -1,0 +1,36 @@
+import java.util.*;
+public class test{
+    public static void main(String args[])
+    {
+    Scanner inp = new Scanner(System.in);
+    //initialize array and its length
+    int n = inp.nextInt();
+    long[] N = new long[n];
+    long[] Z = new long[n];
+    long z = 0;
+    //read array input from the user
+    for(int i =0; i<N.length; i++)
+    {
+        N[i] = inp.nextLong();
+        long n2 = 1;    
+    //special case
+    if(N[i] == 1 || N[i] == 0)
+        {
+        Z[i] = 1;
+        }
+      //factorial for loop
+       for(int j =1; j<N[i]; j++)
+       {
+        n2 = j * n2;
+        z = N[i] * n2;
+        Z[i] = z;
+        }
+    }
+    //output for loop
+    for(int i =0; i<Z.length; i++)
+    {
+        System.out.println(Z[i]);
+    }
+        
+   }   
+ }
