@@ -1,0 +1,40 @@
+ 
+import java.util.*;
+        
+public class test {
+public static void main(String args[])
+{
+    
+    Scanner scn = new Scanner(System.in);
+    int a = scn.nextInt();
+    char s = scn.next().charAt(0);
+    int b = scn.nextInt();
+    char q = scn.next().charAt(0);
+    int c = scn.nextInt();
+    int sum = a + b;
+    int min = a - b;
+    int mul = a * b;
+    if((s=='+' && c == sum)){
+    System.out.println("Yes");
+    }
+    else if(s=='-' && c == min){
+    System.out.println("Yes");
+    }
+     else if(s=='*' && c == mul){
+    System.out.println("Yes");
+    }
+    else if(s=='*' && c != mul)
+    {
+        System.out.println(mul);
+    }
+    else if(s=='-' && c != min)
+    {
+        System.out.println(min);
+    }
+    else if(s=='+' && c != sum)
+    {
+         System.out.println(sum);
+    }
+    
+}
+}
