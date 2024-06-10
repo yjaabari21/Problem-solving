@@ -1,0 +1,9 @@
+import java.util.Scanner;
+public class ptoject1 {
+    public static void main (String args[]){
+    Scanner inp = new Scanner (System.in);
+    double R = inp.nextDouble();
+    double A = 3.141592653 * (R*R);
+        System.out.println(A);
+  }
+}
