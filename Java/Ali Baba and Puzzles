@@ -1,0 +1,26 @@
+import java.util.*;
+        
+public class test {
+public static void main(String args[])
+{
+    Scanner scn = new Scanner(System.in);
+    long a = scn.nextLong();
+    long b = scn.nextLong();
+    long c = scn.nextLong();
+    long d = scn.nextLong();
+    long p1 = a + b - c;
+    long p2 = a - b + c;
+    long p3 = a * b + c;
+    long p4 = a * b - c;
+    long p5 = a + b * c;
+    long p6 = a - b * c;
+    if((p1 == d || p2 == d) || (p3 == d || p4 == d) || (p5 == d || p6 == d))
+    {
+        System.out.println("YES");
+    }
+    else
+    {
+        System.out.println("NO");
+    }
+  }
+}
