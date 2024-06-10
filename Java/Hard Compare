@@ -1,0 +1,24 @@
+import java.util.Scanner;
+ 
+ 
+ 
+public class Test {
+ 
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        long num1 = scn.nextLong();
+        long num2 = scn.nextLong();
+        long num3 = scn.nextLong();
+        long num4 = scn.nextLong();
+        double res1 = num2*Math.log(num1);
+        double res2 = num4*Math.log(num3);
+       if(res1>res2)
+        {
+            System.out.println("YES");
+        }
+        else
+        {
+            System.out.println("NO"); 
+       }
+    }
+}
