@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class ptoject1 {
+    public static void main (String args[]){
+    Scanner inp = new Scanner (System.in);
+    double a = inp.nextDouble();
+    double b = inp.nextDouble();
+    double div = a/b;
+        //System.out.println(div);
+        System.out.println("floor "+ (int)a + " / "+ (int)b + " = " + (int)Math.floor(div));
+        System.out.println("ceil "+ (int)a + " / "+ (int)b + " = " + (int)Math.ceil(div));
+        System.out.println("round "+ (int)a + " / "+ (int)b + " = " + (int)Math.round(div));
+  }
+}
