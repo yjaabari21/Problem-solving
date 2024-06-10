@@ -1,0 +1,35 @@
+import java.util.*;
+        
+public class test {
+public static void main(String args[])
+{
+    int i;
+    int Ecount = 0;
+    int Ocount = 0;
+    int Pcount = 0;
+    int Ncount = 0;
+    Scanner scn = new Scanner(System.in);
+    int k = scn.nextInt();
+    for(i = 0; i<k; i++){
+    int num = scn.nextInt();
+    if(num%2 == 0){
+        Ecount++;
+    }
+    else if(num%2 != 0){
+        Ocount++;
+    }
+    while(num > 0){
+        Pcount++;
+        break;
+    }
+    while(num < 0){
+        Ncount++;
+        break;
+    }
+    }
+    System.out.println("Even: " + Ecount);
+    System.out.println("Odd: " + Ocount);
+    System.out.println("Positive: " + Pcount);
+    System.out.println("Negative: " + Ncount);
+  }
+}
