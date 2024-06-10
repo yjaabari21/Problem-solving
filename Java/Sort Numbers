@@ -1,0 +1,45 @@
+import java.util.*;
+public class test{
+    public static void main(String args[])
+    {
+        Scanner scn = new Scanner(System.in);
+        long A = scn.nextLong();
+        long B = scn.nextLong();
+        long C = scn.nextLong();
+        if((A>=B && A>C) &&  B<C){
+        System.out.println(B + "\n" + C +"\n" + A +"\n");
+        }
+        if((A>=B && A>=C) &&  B>=C){
+        System.out.println(C + "\n" + B +"\n" + A +"\n");
+        }
+        else if( C>=A && B>=A && (B==C||B==A))
+        {
+            System.out.println(A+"\n"+B+"\n"+C+"\n");
+        }
+        else if((B>=A && B>=C) && A>C)
+        {
+            System.out.println(C+"\n"+A + "\n" +B+"\n");
+        }
+        else if((B>=A && B>=C) && A<C)
+        {
+            System.out.println(A+"\n"+C+"\n"+B +"\n");
+        }
+        else if(B<=A && B<=C && (A==C||A==B))
+        {
+            System.out.println(B + "\n" + A + "\n" + C +"\n");
+        }
+        else if((C>=A && B<=C) && A<B)
+        {
+            System.out.println(A+"\n"+B+"\n"+C+"\n");
+        }
+        else if((C>=A && C>=B) && A>B)
+        {
+            System.out.println(B + "\n" + A +"\n" + C+"\n");
+        }
+        else if(C<=A && B>=C && (A==B||A==C))
+        {
+            System.out.println(C + "\n" + A +"\n" + B+"\n");
+        }
+        System.out.print(A + "\n" + B +"\n" + C);
+    }
+}
