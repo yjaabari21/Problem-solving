@@ -1,0 +1,9 @@
+let x = 12;
+
+for(let y = 1; y<=x; y++){
+ console.log("\n");
+ console.log("Table of Number " , y);
+ for(let j = 1; j<=x; j++){
+ console.log(j, " * ", y , " = " , j * y);
+ }
+}
