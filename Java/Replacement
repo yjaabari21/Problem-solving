@@ -1,0 +1,25 @@
+import java.util.*;
+public class test{
+    public static void main(String args[])
+    {
+        Scanner scn = new Scanner(System.in);
+        int t = scn.nextInt();
+        long[] arr = new long[t];
+        for(int i = 0; i<arr.length; i++)
+        {
+            arr[i] = scn.nextLong();
+        }
+        for(int i =0; i<arr.length;i++)
+        {
+            if(arr[i]>0)
+            {
+               arr[i] = 1;
+            } 
+            if(arr[i]<0){
+                arr[i] = 2;
+            }
+            
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
