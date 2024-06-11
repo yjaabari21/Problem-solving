@@ -1,0 +1,21 @@
+import java.util.*;
+public class test{
+    public static void main(String args[])
+    {
+        Scanner scn = new Scanner(System.in);
+        int t = scn.nextInt();
+        long[] A = new long[t];
+        for(int i = 0; i<A.length; i++)
+        {
+            A[i] = scn.nextLong();
+        }
+        for(int i =0; i<A.length;i++)
+        {
+            if(A[i]<=10)
+            {
+               System.out.println("A[" + i +"]" + " = " + A[i]);
+            } 
+            
+        }
+    }
+}
