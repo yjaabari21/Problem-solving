@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age In Days</title>
+</head>
+<style>
+
+</style>
+<body>
+    <input type="text" id="inp1">
+    <button onclick="AgeInDays()">Cliculate</button>
+
+    <div id="year"></div>
+    <div id="month"></div>
+    <div id="days"></div>
+</body>
+<script>
+    function AgeInDays() {
+        let inpDays = parseInt(document.getElementById('inp1').value);
+        let year = inpDays/365;
+        let month = (inpDays%365)/30;
+        let days = (inpDays % 365)%30;
+
+        document.getElementById('year').innerText = 'Years ' + Math.round(year);
+        
+        document.getElementById('month').innerText = 'Months ' + Math.round(month);
+        
+        document.getElementById('days').innerText = 'Days ' + Math.round(days);
+    }
+</script>
+</html>
