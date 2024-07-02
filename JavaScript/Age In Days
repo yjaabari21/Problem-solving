@@ -6,7 +6,29 @@
     <title>Age In Days</title>
 </head>
 <style>
-
+    *{
+        text-align: center;
+    }
+    input{
+        padding: 8px;
+        border-radius: 12px;
+    }
+    button{
+        padding: 8px;
+        margin-left: 12px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    button:hover{
+        background-color: transparent;
+        color: black;
+        transition: .85s ease-in-out;
+    }
 </style>
 <body>
     <input type="text" id="inp1">
