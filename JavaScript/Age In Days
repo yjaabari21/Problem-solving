@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age In Days</title>
 </head>
+
 <style>
     *{
         text-align: center;
@@ -30,14 +31,20 @@
         transition: .85s ease-in-out;
     }
 </style>
-<body>
-    <input type="text" id="inp1">
-    <button onclick="AgeInDays()">Cliculate</button>
 
+<body>
+    <!-- inputs & button -->
+    <input type="text" id="inp1">
+    <button onclick="AgeInDays()">Calculate !</button>
+
+
+    <!-- Output -->
     <div id="year"></div>
     <div id="month"></div>
     <div id="days"></div>
+
 </body>
+
 <script>
     function AgeInDays() {
         let inpDays = parseInt(document.getElementById('inp1').value);
