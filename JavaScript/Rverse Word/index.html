@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>عكس وعدّ الأحرف</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            direction: rtl;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px 25px;
+            width: 320px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        #word{
+            margin-right: -12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>عكس وعدّ الأحرف</h2>
+
+    <input type="text" id="word" placeholder="أدخل الكلمة">
+
+    <button onclick="reverseWords()">عكس الكلمة</button>
+    <button onclick="countLetters()">عدّ الأحرف</button>
+
+    <div class="result" id="result">النتيجة : </div>
+</div>
+
+<Script src="brain.js"></Script>
+
+</body>
+</html>
