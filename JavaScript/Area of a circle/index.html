@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Circle Area Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      width: 320px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      color: #1d3557;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      margin-left: -12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: #457b9d;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #1d3557;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #e63946;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Circle Area</h1>
+
+    <input type="text" id="radius" placeholder="Enter radius">
+
+    <button onclick="calcuCirleArea()">Calculate</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calcuCirleArea(){
+        let radius = document.getElementById("radius").value;
+        let res = document.getElementById("result");
+
+        if(radius === "" || radius<0){
+            res.innerHTML = "Please Enter a Valid Number";
+        }else{
+          const area = Math.PI * (radius * radius);
+          res.innerHTML = "Area = " + area.toFixed(2);
+
+        }
+
+    }
+  </script>
+
+</body>
+</html>
