@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسب المعدل الدراسي</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .calculator {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        width: 300px;
+        text-align: center;
+    }
+    .calculator h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #fff;
+    }
+    input[type="number"] {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 16px;
+    }
+    button {
+        background-color: #fff;
+        color: #2575fc;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    button:hover {
+        background-color: #6a11cb;
+        color: #fff;
+    }
+    .result {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="calculator">
+    <h1>حاسب المعدل الدراسي</h1>
+    <input type="number" id="subjects" placeholder="عدد المواد">
+    <button onclick="generateInputs()">تأكيد</button>
+    <div id="gradesInputs"></div>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+function generateInputs() {
+    const subjectsCount = parseInt(document.getElementById('subjects').value);
+    const container = document.getElementById('gradesInputs');
+    const resultDiv = document.getElementById('result');
+    container.innerHTML = '';
+    resultDiv.innerHTML = '';
+    
+    if (isNaN(subjectsCount) || subjectsCount <= 0) {
+        alert('الرجاء إدخال عدد صحيح من المواد');
+        return;
+    }
+
+    for (let i = 1; i <= subjectsCount; i++) {
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.placeholder = `درجة المادة ${i}`;
+        input.id = `grade${i}`;
+        input.min = 0;
+        input.max = 100;
+        container.appendChild(input);
+    }
+
+    const calcButton = document.createElement('button');
+    calcButton.textContent = 'احسب المعدل';
+    calcButton.onclick = calculateAverage;
+    container.appendChild(calcButton);
+}
+
+function calculateAverage() {
+    const subjectsCount = parseInt(document.getElementById('subjects').value);
+    let total = 0;
+    for (let i = 1; i <= subjectsCount; i++) {
+        const grade = parseFloat(document.getElementById(`grade${i}`).value);
+        if (isNaN(grade) || grade < 0 || grade > 100) {
+            alert(`الرجاء إدخال درجة صحيحة للمادة ${i}`);
+            return;
+        }
+        total += grade;
+    }
+    const average = total / subjectsCount;
+    document.getElementById('result').innerHTML = `المعدل النهائي: ${average.toFixed(2)}`;
+}
+</script>
+
+</body>
+</html>
