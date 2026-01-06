@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>فاحص الأعداد الأولية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .card {
+            width: 360px;
+            padding: 30px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 114, 255, 0.5);
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            min-height: 30px;
+            transition: 0.3s;
+        }
+
+        .prime {
+            color: #00ffb3;
+            text-shadow: 0 0 10px #00ffb3;
+        }
+
+        .not-prime {
+            color: #ff6b6b;
+            text-shadow: 0 0 10px #ff6b6b;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>🔢 Prime Number Checker</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkPrimeNumber()">Check Number</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function isPrime(num){
+        if(num<1) return false;
+        if(num === 2) return true;
+        if(num % 2 === 0) return false;
+
+        for(let i = 3; i<=Math.sqrt(num); i+=2){
+            if(num % i === 0) return false;
+        }
+
+        return true;
+    }
+
+    function checkPrimeNumber(){
+        const input = document.getElementById("numberInput").value;
+        const res = document.getElementById("result");
+        let number = parseInt(input);
+
+        if(isNaN(number)){
+            res.textContent = "Please Enter a Valid Number";
+            res.className =  "result not-prime";
+            return;
+        }
+
+        if(isPrime(number)){
+            res.textContent = `${number} is Prime Number`;
+            res.className = "result prime";
+        }
+        else{
+            res.textContent = `${number} is Not Prime Number`;
+            res.className = "result not-prime";
+        }
+    }
+</script>
+
+</body>
+</html>
